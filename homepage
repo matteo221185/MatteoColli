@@ -1,0 +1,30 @@
+<%@ Page Title="" Language="C#" MasterPageFile="~/Pinacoteca.master" MaintainScrollPositionOnPostback="true" AutoEventWireup="true" CodeBehind="~/aspx/Homepage.aspx.cs" Inherits="aspx_Homepage" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="../img/styleImg.css" rel="stylesheet" />
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <div class="jumbotron text-center">
+        <h1>FILM</h1>
+    </div>
+
+    <div class="panel panel-info" style="height: 80px; width:auto;">
+        <div class="panel-heading">Credito Utente</div>
+        <div class="label col-sm-3">
+            <asp:Label ID="lblConto" runat="server" Style="color: red; font-size: 20px;"></asp:Label>
+        </div>
+        <div class="col-sm-2">
+            <asp:Button ID="btnRicarica" class="btn btn-primary" runat="server" Text="Ricarica" OnClick="btnRicarica_Click" />
+        </div>
+        <div class="col-sm-4">
+            <asp:TextBox ID="txtRicarica" runat="server" class="form-control"></asp:TextBox>
+        </div>
+    </div>
+
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <asp:Table ID="tblFilm" runat="server" Class="table"></asp:Table>
+    </div>
+</asp:Content>
